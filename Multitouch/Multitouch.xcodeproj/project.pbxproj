@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1481497B1CEA8FCE000F5E92 /* LaserNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1481497A1CEA8FCE000F5E92 /* LaserNode.swift */; };
+		1481497C1CEA8FCE000F5E92 /* LaserNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1481497A1CEA8FCE000F5E92 /* LaserNode.swift */; };
+		1481497D1CEA8FCE000F5E92 /* LaserNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1481497A1CEA8FCE000F5E92 /* LaserNode.swift */; };
+		1481497F1CED4FFB000F5E92 /* LaserPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1481497E1CED4FFB000F5E92 /* LaserPath.swift */; };
+		148149801CED4FFB000F5E92 /* LaserPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1481497E1CED4FFB000F5E92 /* LaserPath.swift */; };
+		148149811CED4FFB000F5E92 /* LaserPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1481497E1CED4FFB000F5E92 /* LaserPath.swift */; };
+		14EB177C1CE53DCB00A5BDB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB177B1CE53DCB00A5BDB7 /* AppDelegate.swift */; };
+		14EB177E1CE53DCB00A5BDB7 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 14EB177D1CE53DCB00A5BDB7 /* GameScene.sks */; };
+		14EB17801CE53DCB00A5BDB7 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB177F1CE53DCB00A5BDB7 /* GameScene.swift */; };
+		14EB17821CE53DCB00A5BDB7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB17811CE53DCB00A5BDB7 /* GameViewController.swift */; };
+		14EB17851CE53DCB00A5BDB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EB17831CE53DCB00A5BDB7 /* Main.storyboard */; };
+		14EB17871CE53DCB00A5BDB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14EB17861CE53DCB00A5BDB7 /* Assets.xcassets */; };
+		14EB178A1CE53DCB00A5BDB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EB17881CE53DCB00A5BDB7 /* LaunchScreen.storyboard */; };
+		14EB17951CE53DCB00A5BDB7 /* MultitouchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB17941CE53DCB00A5BDB7 /* MultitouchTests.swift */; };
+		14EB17A01CE53DCB00A5BDB7 /* MultitouchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB179F1CE53DCB00A5BDB7 /* MultitouchUITests.swift */; };
+		14EB17AE1CE5404500A5BDB7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB17AD1CE5404500A5BDB7 /* Player.swift */; };
+		14EB17AF1CE5404500A5BDB7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB17AD1CE5404500A5BDB7 /* Player.swift */; };
+		14EB17B01CE5404500A5BDB7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB17AD1CE5404500A5BDB7 /* Player.swift */; };
+		14EB17B21CE541BF00A5BDB7 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB17B11CE541BF00A5BDB7 /* UIColorExtensions.swift */; };
+		14EB17B31CE541BF00A5BDB7 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB17B11CE541BF00A5BDB7 /* UIColorExtensions.swift */; };
+		14EB17B41CE541BF00A5BDB7 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB17B11CE541BF00A5BDB7 /* UIColorExtensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14EB17911CE53DCB00A5BDB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14EB17701CE53DCB00A5BDB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14EB17771CE53DCB00A5BDB7;
+			remoteInfo = Multitouch;
+		};
+		14EB179C1CE53DCB00A5BDB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14EB17701CE53DCB00A5BDB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14EB17771CE53DCB00A5BDB7;
+			remoteInfo = Multitouch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1481497A1CEA8FCE000F5E92 /* LaserNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserNode.swift; sourceTree = "<group>"; };
+		1481497E1CED4FFB000F5E92 /* LaserPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserPath.swift; sourceTree = "<group>"; };
+		14EB17781CE53DCB00A5BDB7 /* Multitouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Multitouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14EB177B1CE53DCB00A5BDB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14EB177D1CE53DCB00A5BDB7 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		14EB177F1CE53DCB00A5BDB7 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		14EB17811CE53DCB00A5BDB7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		14EB17841CE53DCB00A5BDB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14EB17861CE53DCB00A5BDB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14EB17891CE53DCB00A5BDB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14EB178B1CE53DCB00A5BDB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14EB17901CE53DCB00A5BDB7 /* MultitouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultitouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14EB17941CE53DCB00A5BDB7 /* MultitouchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultitouchTests.swift; sourceTree = "<group>"; };
+		14EB17961CE53DCB00A5BDB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14EB179B1CE53DCB00A5BDB7 /* MultitouchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultitouchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14EB179F1CE53DCB00A5BDB7 /* MultitouchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultitouchUITests.swift; sourceTree = "<group>"; };
+		14EB17A11CE53DCB00A5BDB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14EB17AD1CE5404500A5BDB7 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		14EB17B11CE541BF00A5BDB7 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14EB17751CE53DCB00A5BDB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EB178D1CE53DCB00A5BDB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EB17981CE53DCB00A5BDB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14EB176F1CE53DCB00A5BDB7 = {
+			isa = PBXGroup;
+			children = (
+				14EB177A1CE53DCB00A5BDB7 /* Multitouch */,
+				14EB17931CE53DCB00A5BDB7 /* MultitouchTests */,
+				14EB179E1CE53DCB00A5BDB7 /* MultitouchUITests */,
+				14EB17791CE53DCB00A5BDB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14EB17791CE53DCB00A5BDB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14EB17781CE53DCB00A5BDB7 /* Multitouch.app */,
+				14EB17901CE53DCB00A5BDB7 /* MultitouchTests.xctest */,
+				14EB179B1CE53DCB00A5BDB7 /* MultitouchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14EB177A1CE53DCB00A5BDB7 /* Multitouch */ = {
+			isa = PBXGroup;
+			children = (
+				14EB177B1CE53DCB00A5BDB7 /* AppDelegate.swift */,
+				14EB17811CE53DCB00A5BDB7 /* GameViewController.swift */,
+				14EB177D1CE53DCB00A5BDB7 /* GameScene.sks */,
+				14EB177F1CE53DCB00A5BDB7 /* GameScene.swift */,
+				1481497A1CEA8FCE000F5E92 /* LaserNode.swift */,
+				1481497E1CED4FFB000F5E92 /* LaserPath.swift */,
+				14EB17AD1CE5404500A5BDB7 /* Player.swift */,
+				14EB17B11CE541BF00A5BDB7 /* UIColorExtensions.swift */,
+				14EB17831CE53DCB00A5BDB7 /* Main.storyboard */,
+				14EB17881CE53DCB00A5BDB7 /* LaunchScreen.storyboard */,
+				14EB17861CE53DCB00A5BDB7 /* Assets.xcassets */,
+				14EB178B1CE53DCB00A5BDB7 /* Info.plist */,
+			);
+			path = Multitouch;
+			sourceTree = "<group>";
+		};
+		14EB17931CE53DCB00A5BDB7 /* MultitouchTests */ = {
+			isa = PBXGroup;
+			children = (
+				14EB17941CE53DCB00A5BDB7 /* MultitouchTests.swift */,
+				14EB17961CE53DCB00A5BDB7 /* Info.plist */,
+			);
+			path = MultitouchTests;
+			sourceTree = "<group>";
+		};
+		14EB179E1CE53DCB00A5BDB7 /* MultitouchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				14EB179F1CE53DCB00A5BDB7 /* MultitouchUITests.swift */,
+				14EB17A11CE53DCB00A5BDB7 /* Info.plist */,
+			);
+			path = MultitouchUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14EB17771CE53DCB00A5BDB7 /* Multitouch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14EB17A41CE53DCB00A5BDB7 /* Build configuration list for PBXNativeTarget "Multitouch" */;
+			buildPhases = (
+				14EB17741CE53DCB00A5BDB7 /* Sources */,
+				14EB17751CE53DCB00A5BDB7 /* Frameworks */,
+				14EB17761CE53DCB00A5BDB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Multitouch;
+			productName = Multitouch;
+			productReference = 14EB17781CE53DCB00A5BDB7 /* Multitouch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14EB178F1CE53DCB00A5BDB7 /* MultitouchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14EB17A71CE53DCB00A5BDB7 /* Build configuration list for PBXNativeTarget "MultitouchTests" */;
+			buildPhases = (
+				14EB178C1CE53DCB00A5BDB7 /* Sources */,
+				14EB178D1CE53DCB00A5BDB7 /* Frameworks */,
+				14EB178E1CE53DCB00A5BDB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14EB17921CE53DCB00A5BDB7 /* PBXTargetDependency */,
+			);
+			name = MultitouchTests;
+			productName = MultitouchTests;
+			productReference = 14EB17901CE53DCB00A5BDB7 /* MultitouchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14EB179A1CE53DCB00A5BDB7 /* MultitouchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14EB17AA1CE53DCB00A5BDB7 /* Build configuration list for PBXNativeTarget "MultitouchUITests" */;
+			buildPhases = (
+				14EB17971CE53DCB00A5BDB7 /* Sources */,
+				14EB17981CE53DCB00A5BDB7 /* Frameworks */,
+				14EB17991CE53DCB00A5BDB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14EB179D1CE53DCB00A5BDB7 /* PBXTargetDependency */,
+			);
+			name = MultitouchUITests;
+			productName = MultitouchUITests;
+			productReference = 14EB179B1CE53DCB00A5BDB7 /* MultitouchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14EB17701CE53DCB00A5BDB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Alling Katz";
+				TargetAttributes = {
+					14EB17771CE53DCB00A5BDB7 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 8CY5Z5MBG9;
+					};
+					14EB178F1CE53DCB00A5BDB7 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 14EB17771CE53DCB00A5BDB7;
+					};
+					14EB179A1CE53DCB00A5BDB7 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 14EB17771CE53DCB00A5BDB7;
+					};
+				};
+			};
+			buildConfigurationList = 14EB17731CE53DCB00A5BDB7 /* Build configuration list for PBXProject "Multitouch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14EB176F1CE53DCB00A5BDB7;
+			productRefGroup = 14EB17791CE53DCB00A5BDB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14EB17771CE53DCB00A5BDB7 /* Multitouch */,
+				14EB178F1CE53DCB00A5BDB7 /* MultitouchTests */,
+				14EB179A1CE53DCB00A5BDB7 /* MultitouchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14EB17761CE53DCB00A5BDB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14EB177E1CE53DCB00A5BDB7 /* GameScene.sks in Resources */,
+				14EB178A1CE53DCB00A5BDB7 /* LaunchScreen.storyboard in Resources */,
+				14EB17871CE53DCB00A5BDB7 /* Assets.xcassets in Resources */,
+				14EB17851CE53DCB00A5BDB7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EB178E1CE53DCB00A5BDB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EB17991CE53DCB00A5BDB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14EB17741CE53DCB00A5BDB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14EB17AE1CE5404500A5BDB7 /* Player.swift in Sources */,
+				1481497F1CED4FFB000F5E92 /* LaserPath.swift in Sources */,
+				14EB17801CE53DCB00A5BDB7 /* GameScene.swift in Sources */,
+				1481497B1CEA8FCE000F5E92 /* LaserNode.swift in Sources */,
+				14EB17821CE53DCB00A5BDB7 /* GameViewController.swift in Sources */,
+				14EB177C1CE53DCB00A5BDB7 /* AppDelegate.swift in Sources */,
+				14EB17B21CE541BF00A5BDB7 /* UIColorExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EB178C1CE53DCB00A5BDB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14EB17B31CE541BF00A5BDB7 /* UIColorExtensions.swift in Sources */,
+				14EB17AF1CE5404500A5BDB7 /* Player.swift in Sources */,
+				148149801CED4FFB000F5E92 /* LaserPath.swift in Sources */,
+				1481497C1CEA8FCE000F5E92 /* LaserNode.swift in Sources */,
+				14EB17951CE53DCB00A5BDB7 /* MultitouchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EB17971CE53DCB00A5BDB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14EB17B41CE541BF00A5BDB7 /* UIColorExtensions.swift in Sources */,
+				14EB17B01CE5404500A5BDB7 /* Player.swift in Sources */,
+				148149811CED4FFB000F5E92 /* LaserPath.swift in Sources */,
+				1481497D1CEA8FCE000F5E92 /* LaserNode.swift in Sources */,
+				14EB17A01CE53DCB00A5BDB7 /* MultitouchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14EB17921CE53DCB00A5BDB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14EB17771CE53DCB00A5BDB7 /* Multitouch */;
+			targetProxy = 14EB17911CE53DCB00A5BDB7 /* PBXContainerItemProxy */;
+		};
+		14EB179D1CE53DCB00A5BDB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14EB17771CE53DCB00A5BDB7 /* Multitouch */;
+			targetProxy = 14EB179C1CE53DCB00A5BDB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14EB17831CE53DCB00A5BDB7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14EB17841CE53DCB00A5BDB7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14EB17881CE53DCB00A5BDB7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14EB17891CE53DCB00A5BDB7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14EB17A21CE53DCB00A5BDB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14EB17A31CE53DCB00A5BDB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14EB17A51CE53DCB00A5BDB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Multitouch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AK.Multitouch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		14EB17A61CE53DCB00A5BDB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Multitouch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AK.Multitouch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		14EB17A81CE53DCB00A5BDB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = MultitouchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AK.MultitouchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Multitouch.app/Multitouch";
+			};
+			name = Debug;
+		};
+		14EB17A91CE53DCB00A5BDB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MultitouchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AK.MultitouchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Multitouch.app/Multitouch";
+			};
+			name = Release;
+		};
+		14EB17AB1CE53DCB00A5BDB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = MultitouchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AK.MultitouchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Multitouch;
+			};
+			name = Debug;
+		};
+		14EB17AC1CE53DCB00A5BDB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MultitouchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AK.MultitouchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Multitouch;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14EB17731CE53DCB00A5BDB7 /* Build configuration list for PBXProject "Multitouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14EB17A21CE53DCB00A5BDB7 /* Debug */,
+				14EB17A31CE53DCB00A5BDB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14EB17A41CE53DCB00A5BDB7 /* Build configuration list for PBXNativeTarget "Multitouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14EB17A51CE53DCB00A5BDB7 /* Debug */,
+				14EB17A61CE53DCB00A5BDB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14EB17A71CE53DCB00A5BDB7 /* Build configuration list for PBXNativeTarget "MultitouchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14EB17A81CE53DCB00A5BDB7 /* Debug */,
+				14EB17A91CE53DCB00A5BDB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14EB17AA1CE53DCB00A5BDB7 /* Build configuration list for PBXNativeTarget "MultitouchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14EB17AB1CE53DCB00A5BDB7 /* Debug */,
+				14EB17AC1CE53DCB00A5BDB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14EB17701CE53DCB00A5BDB7 /* Project object */;
+}
