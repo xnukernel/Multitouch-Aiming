@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		145DD8651CF3DD5E00CCAA6C /* SKShapeNodeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD8641CF3DD5E00CCAA6C /* SKShapeNodeExtensions.swift */; };
 		1481497B1CEA8FCE000F5E92 /* LaserNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1481497A1CEA8FCE000F5E92 /* LaserNode.swift */; };
 		1481497C1CEA8FCE000F5E92 /* LaserNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1481497A1CEA8FCE000F5E92 /* LaserNode.swift */; };
 		1481497D1CEA8FCE000F5E92 /* LaserNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1481497A1CEA8FCE000F5E92 /* LaserNode.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		145DD8641CF3DD5E00CCAA6C /* SKShapeNodeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKShapeNodeExtensions.swift; sourceTree = "<group>"; };
 		1481497A1CEA8FCE000F5E92 /* LaserNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserNode.swift; sourceTree = "<group>"; };
 		1481497E1CED4FFB000F5E92 /* LaserPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserPath.swift; sourceTree = "<group>"; };
 		14EB17781CE53DCB00A5BDB7 /* Multitouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Multitouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		145DD8661CF3DF9F00CCAA6C /* Trash */ = {
+			isa = PBXGroup;
+			children = (
+				1481497A1CEA8FCE000F5E92 /* LaserNode.swift */,
+				1481497E1CED4FFB000F5E92 /* LaserPath.swift */,
+			);
+			name = Trash;
+			sourceTree = "<group>";
+		};
 		14EB176F1CE53DCB00A5BDB7 = {
 			isa = PBXGroup;
 			children = (
@@ -121,14 +132,14 @@
 				14EB17811CE53DCB00A5BDB7 /* GameViewController.swift */,
 				14EB177D1CE53DCB00A5BDB7 /* GameScene.sks */,
 				14EB177F1CE53DCB00A5BDB7 /* GameScene.swift */,
-				1481497A1CEA8FCE000F5E92 /* LaserNode.swift */,
-				1481497E1CED4FFB000F5E92 /* LaserPath.swift */,
+				145DD8641CF3DD5E00CCAA6C /* SKShapeNodeExtensions.swift */,
 				14EB17AD1CE5404500A5BDB7 /* Player.swift */,
 				14EB17B11CE541BF00A5BDB7 /* UIColorExtensions.swift */,
 				14EB17831CE53DCB00A5BDB7 /* Main.storyboard */,
 				14EB17881CE53DCB00A5BDB7 /* LaunchScreen.storyboard */,
 				14EB17861CE53DCB00A5BDB7 /* Assets.xcassets */,
 				14EB178B1CE53DCB00A5BDB7 /* Info.plist */,
+				145DD8661CF3DF9F00CCAA6C /* Trash */,
 			);
 			path = Multitouch;
 			sourceTree = "<group>";
@@ -287,6 +298,7 @@
 				14EB17AE1CE5404500A5BDB7 /* Player.swift in Sources */,
 				1481497F1CED4FFB000F5E92 /* LaserPath.swift in Sources */,
 				14EB17801CE53DCB00A5BDB7 /* GameScene.swift in Sources */,
+				145DD8651CF3DD5E00CCAA6C /* SKShapeNodeExtensions.swift in Sources */,
 				1481497B1CEA8FCE000F5E92 /* LaserNode.swift in Sources */,
 				14EB17821CE53DCB00A5BDB7 /* GameViewController.swift in Sources */,
 				14EB177C1CE53DCB00A5BDB7 /* AppDelegate.swift in Sources */,

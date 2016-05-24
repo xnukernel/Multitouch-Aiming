@@ -84,7 +84,7 @@ extension GameScene {
       laser.strokeColor = UIColor("#ff0275")
       self.addChild(laser)
       self.activeLasers.append(laser)
-      
+      laser.fadeOut()      
     }
 //    dragNodes(touches, nodeKeys: ["player1", "player2"])
   }
@@ -125,6 +125,7 @@ extension GameScene {
       laser.strokeColor = UIColor("#ff0257")
       self.addChild(laser)
       self.activeLasers.append(laser)
+      laser.fadeOut()
     }
 //    dragNodes(touches, nodeKeys: ["player1", "player2"])
   }
@@ -141,7 +142,7 @@ extension GameScene {
       node.removeFromParent()
       self.activeLasers.removeFirst()
     }
-    self.selectedNodes.removeAll()
+//    self.selectedNodes.removeAll()
   }
 }
 
