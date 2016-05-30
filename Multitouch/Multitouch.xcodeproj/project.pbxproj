@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		145860711CF8716300731EF4 /* LaserShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145860701CF8716300731EF4 /* LaserShapeNode.swift */; };
+		145860721CF8716300731EF4 /* LaserShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145860701CF8716300731EF4 /* LaserShapeNode.swift */; };
+		145860731CF8716300731EF4 /* LaserShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145860701CF8716300731EF4 /* LaserShapeNode.swift */; };
 		145DD8651CF3DD5E00CCAA6C /* SKShapeNodeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DD8641CF3DD5E00CCAA6C /* SKShapeNodeExtensions.swift */; };
 		1481497B1CEA8FCE000F5E92 /* LaserNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1481497A1CEA8FCE000F5E92 /* LaserNode.swift */; };
 		1481497C1CEA8FCE000F5E92 /* LaserNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1481497A1CEA8FCE000F5E92 /* LaserNode.swift */; };
@@ -49,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		145860701CF8716300731EF4 /* LaserShapeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserShapeNode.swift; sourceTree = "<group>"; };
+		145860751CF8825E00731EF4 /* NodeRotation.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NodeRotation.playground; sourceTree = "<group>"; };
 		145DD8641CF3DD5E00CCAA6C /* SKShapeNodeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKShapeNodeExtensions.swift; sourceTree = "<group>"; };
 		1481497A1CEA8FCE000F5E92 /* LaserNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserNode.swift; sourceTree = "<group>"; };
 		1481497E1CED4FFB000F5E92 /* LaserPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserPath.swift; sourceTree = "<group>"; };
@@ -108,6 +113,7 @@
 		14EB176F1CE53DCB00A5BDB7 = {
 			isa = PBXGroup;
 			children = (
+				145860751CF8825E00731EF4 /* NodeRotation.playground */,
 				14EB177A1CE53DCB00A5BDB7 /* Multitouch */,
 				14EB17931CE53DCB00A5BDB7 /* MultitouchTests */,
 				14EB179E1CE53DCB00A5BDB7 /* MultitouchUITests */,
@@ -132,8 +138,9 @@
 				14EB17811CE53DCB00A5BDB7 /* GameViewController.swift */,
 				14EB177D1CE53DCB00A5BDB7 /* GameScene.sks */,
 				14EB177F1CE53DCB00A5BDB7 /* GameScene.swift */,
-				145DD8641CF3DD5E00CCAA6C /* SKShapeNodeExtensions.swift */,
+				145860701CF8716300731EF4 /* LaserShapeNode.swift */,
 				14EB17AD1CE5404500A5BDB7 /* Player.swift */,
+				145DD8641CF3DD5E00CCAA6C /* SKShapeNodeExtensions.swift */,
 				14EB17B11CE541BF00A5BDB7 /* UIColorExtensions.swift */,
 				14EB17831CE53DCB00A5BDB7 /* Main.storyboard */,
 				14EB17881CE53DCB00A5BDB7 /* LaunchScreen.storyboard */,
@@ -295,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				145860711CF8716300731EF4 /* LaserShapeNode.swift in Sources */,
 				14EB17AE1CE5404500A5BDB7 /* Player.swift in Sources */,
 				1481497F1CED4FFB000F5E92 /* LaserPath.swift in Sources */,
 				14EB17801CE53DCB00A5BDB7 /* GameScene.swift in Sources */,
@@ -313,6 +321,7 @@
 				14EB17B31CE541BF00A5BDB7 /* UIColorExtensions.swift in Sources */,
 				14EB17AF1CE5404500A5BDB7 /* Player.swift in Sources */,
 				148149801CED4FFB000F5E92 /* LaserPath.swift in Sources */,
+				145860721CF8716300731EF4 /* LaserShapeNode.swift in Sources */,
 				1481497C1CEA8FCE000F5E92 /* LaserNode.swift in Sources */,
 				14EB17951CE53DCB00A5BDB7 /* MultitouchTests.swift in Sources */,
 			);
@@ -325,6 +334,7 @@
 				14EB17B41CE541BF00A5BDB7 /* UIColorExtensions.swift in Sources */,
 				14EB17B01CE5404500A5BDB7 /* Player.swift in Sources */,
 				148149811CED4FFB000F5E92 /* LaserPath.swift in Sources */,
+				145860731CF8716300731EF4 /* LaserShapeNode.swift in Sources */,
 				1481497D1CEA8FCE000F5E92 /* LaserNode.swift in Sources */,
 				14EB17A01CE53DCB00A5BDB7 /* MultitouchUITests.swift in Sources */,
 			);

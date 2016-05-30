@@ -14,7 +14,6 @@ class GameScene: SKScene {
   var player1 = Player(imageNamed: "player1")
   var player2 = Player(imageNamed: "player2")
   
-  var ref = CGPathCreateMutable()
   var activeLasers = [SKShapeNode]()
   
   
@@ -62,8 +61,8 @@ extension GameScene {
     
     Firing: if shouldFire(touches) {
       
-      let laser = SKShapeNode()
-      let path = CGPathCreateMutable()
+//      let laser = SKShapeNode()
+//      let path = CGPathCreateMutable()
       
       let playerOneTouch = touchesForNode("player1", touches)?.first!
       let exclusiveTouches = touchesNotForNode("player1", touches)
@@ -75,16 +74,23 @@ extension GameScene {
       let touchLocationOne = playerOneTouch?.locationInNode(self)
       let touchLocationTwo = otherTouch?.locationInNode(self)
       
-      CGPathMoveToPoint(path, nil, (touchLocationOne?.x)!, (touchLocationOne?.y)!)
-      CGPathAddLineToPoint(path, nil, (touchLocationTwo?.x)!, (touchLocationTwo?.y)!)
-
-      laser.path = path
-      laser.lineWidth = 4.0
-      laser.fillColor = UIColor("#ff0257")
-      laser.strokeColor = UIColor("#ff0275")
+//      CGPathMoveToPoint(path, nil, (touchLocationOne?.x)!, (touchLocationOne?.y)!)
+//      CGPathAddLineToPoint(path, nil, (touchLocationTwo?.x)!, (touchLocationTwo?.y)!)
+//
+//      laser.path = path
+//      laser.lineWidth = 4.0
+//      laser.fillColor = UIColor("#ff0275")
+//      laser.strokeColor = UIColor("#ff0275")
+//      self.addChild(laser)
+//      self.activeLasers.append(laser)
+//      laser.fadeOut()      
+      let rotateAngle = self.rotateAngle(touchLocationOne!, toPoint: touchLocationTwo!)
+      player1.rotate(rotateAngle)
+      
+      let laser = LaserShapeNode(touchLocationOne!, touchLocationTwo!)
       self.addChild(laser)
       self.activeLasers.append(laser)
-      laser.fadeOut()      
+      laser.animate()
     }
 //    dragNodes(touches, nodeKeys: ["player1", "player2"])
   }
@@ -103,8 +109,8 @@ extension GameScene {
     
     Firing: if shouldFire(touches) {
       
-      let laser = SKShapeNode()
-      let path = CGPathCreateMutable()
+//      let laser = SKShapeNode()
+//      let path = CGPathCreateMutable()
       
       let playerOneTouch = touchesForNode("player1", touches)?.first!
       let exclusiveTouches = touchesNotForNode("player1", touches)
@@ -116,16 +122,23 @@ extension GameScene {
       let touchLocationOne = playerOneTouch?.locationInNode(self)
       let touchLocationTwo = otherTouch?.locationInNode(self)
       
-      CGPathMoveToPoint(path, nil, (touchLocationOne?.x)!, (touchLocationOne?.y)!)
-      CGPathAddLineToPoint(path, nil, (touchLocationTwo?.x)!, (touchLocationTwo?.y)!)
+//      CGPathMoveToPoint(path, nil, (touchLocationOne?.x)!, (touchLocationOne?.y)!)
+//      CGPathAddLineToPoint(path, nil, (touchLocationTwo?.x)!, (touchLocationTwo?.y)!)
       
-      laser.path = path
-      laser.lineWidth = 4.0
-      laser.fillColor = UIColor("#ff0257")
-      laser.strokeColor = UIColor("#ff0257")
+//      laser.path = path
+//      laser.lineWidth = 4.0
+//      laser.fillColor = UIColor("#ff0257")
+//      laser.strokeColor = UIColor("#ff0257")
+//      self.addChild(laser)
+//      self.activeLasers.append(laser)
+//      laser.fadeOut()
+      let rotateAngle = self.rotateAngle(touchLocationOne!, toPoint: touchLocationTwo!)
+      player1.rotate(rotateAngle)
+      
+      let laser = LaserShapeNode(touchLocationOne!, touchLocationTwo!)
       self.addChild(laser)
       self.activeLasers.append(laser)
-      laser.fadeOut()
+      laser.animate()
     }
 //    dragNodes(touches, nodeKeys: ["player1", "player2"])
   }
@@ -268,5 +281,44 @@ extension GameScene {
     } else {
       return false
     }
+  }
+  
+  
+  //
+  //  Adjusted Angle Calculation
+  //
+  func rotateAngle(origin: CGPoint, toPoint: CGPoint) -> CGFloat {
+    
+    let adjustedPoint = CGPointMake((toPoint.x - origin.x), (toPoint.y - origin.y))
+    let magnitude = sqrt(pow(adjustedPoint.x, 2) + pow(adjustedPoint.y, 2))
+    let unitPoint = CGPointMake((adjustedPoint.x / magnitude), (adjustedPoint.y / magnitude))
+    
+    var angle: CGFloat = 0
+    
+    if (adjustedPoint.x > 0) {
+      
+      if (adjustedPoint.y > 0) {
+        // Quadrant 1
+        angle = atan(unitPoint.y / unitPoint.x)
+      }
+      else if (adjustedPoint.y < 0) {
+        // Quadrant 4
+        angle = atan(abs(unitPoint.x / unitPoint.y)) + CGFloat(M_PI) + CGFloat(M_PI / 2)
+      }
+    }
+    else if (adjustedPoint.x < 0) {
+    
+      if (adjustedPoint.y > 0) {
+        // Quadrant 2
+        angle = atan(abs(unitPoint.x / unitPoint.y)) + CGFloat(M_PI / 2)
+        
+      }
+      else if (adjustedPoint.y < 0) {
+        // Quadrant 3
+        angle = atan(abs(unitPoint.y / unitPoint.x)) +
+        CGFloat(M_PI)
+      }
+    }
+    return angle
   }
 }

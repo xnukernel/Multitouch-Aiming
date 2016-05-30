@@ -17,6 +17,7 @@ class Player: SKSpriteNode {
   var fireRange: CGVector
   var fireRate: NSTimeInterval
   var isShielded: Bool
+  var preTouchedRotation: CGFloat = CGFloat(M_PI / 2)
   
   // TODO: set start positions, dynamic for health? (SBA)
   init(imageNamed: String) {
@@ -27,6 +28,7 @@ class Player: SKSpriteNode {
     self.fireRange = CGVector(dx: 150, dy: 0)
     let playerTexture = SKTexture(imageNamed: imageNamed)
     super.init(texture: playerTexture, color: SKColor.clearColor(), size: playerTexture.size())
+    self.zRotation = self.preTouchedRotation
     // NEED -- setup start position (SBA)
     // NEED -- dynamic color for health
   }
@@ -54,5 +56,10 @@ class Player: SKSpriteNode {
     // create a bullet
     // move bullet
     // remove bullet
+  }
+  
+  func rotate(angle: CGFloat) {
+    // roatates the sprite
+    self.zRotation = angle - (CGFloat(M_PI) / 2)
   }
 }
