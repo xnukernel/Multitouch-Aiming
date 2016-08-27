@@ -1,11 +1,11 @@
 # Multitouch
-Multitouch Experiments for Blast App
+Multitouch Experiments in iOS
 
 Multitouch Experiments
 ===================
 
 
-The goal of this experiment is to build a framework with which to handle multi-touches in the Blast app.
+The goal of this experiment is to build a framework with which to handle multi-touches for two finger firing.
 
 ----------
 
