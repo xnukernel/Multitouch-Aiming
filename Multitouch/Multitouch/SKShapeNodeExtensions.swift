@@ -14,13 +14,13 @@ extension SKShapeNode {
   func fadeOut() {
     
     let fadeDuration = 1.0
-    let fadeAction = SKAction.fadeOutWithDuration(fadeDuration)
+    let fadeAction = SKAction.fadeOut(withDuration: fadeDuration)
     
     let waitDuration = 0.25
-    let waitAction = SKAction.waitForDuration(waitDuration)
+    let waitAction = SKAction.wait(forDuration: waitDuration)
     
-    let actionSequence = SKAction.sequence([waitAction, fadeAction, SKAction.runBlock({ self.removeFromParent() })])
+    let actionSequence = SKAction.sequence([waitAction, fadeAction, SKAction.run({ self.removeFromParent() })])
     
-    self.runAction(actionSequence)
+    self.run(actionSequence)
   }
 }

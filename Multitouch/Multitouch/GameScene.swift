@@ -17,19 +17,19 @@ class GameScene: SKScene {
   var activeLasers = [SKShapeNode]()
   
   
-  override func didMoveToView(view: SKView) {
+  override func didMove(to view: SKView) {
     /* Setup your scene here */
     
-    self.backgroundColor = UIColor.blackColor()
+    self.backgroundColor = UIColor.black
     
     player1.size = CGSize(width: 100, height: 100)
-    let player1StartLocation = CGPoint(x: CGRectGetMidY(self.frame) + 150, y: CGRectGetMidY(self.frame))
+    let player1StartLocation = CGPoint(x: self.frame.midY + 150, y: self.frame.midY)
     player1.position = player1StartLocation
     player1.name = "player1"
     self.addChild(player1)
     
     player2.size = CGSize(width: 100, height: 100)
-    let player2StartLocation = CGPoint(x: CGRectGetMidY(self.frame) - 150, y: CGRectGetMidY(self.frame))
+    let player2StartLocation = CGPoint(x: self.frame.midY - 150, y: self.frame.midY)
     player2.position = player2StartLocation
     player2.name = "player2"
     self.addChild(player2)
@@ -37,7 +37,7 @@ class GameScene: SKScene {
   }
   
   
-  override func update(currentTime: NSTimeInterval) {
+  override func update(_ currentTime: TimeInterval) {
     
     /* Called before each frame is rendered */
     
@@ -52,7 +52,7 @@ extension GameScene {
   // Touches Began Function
   //
   
-  override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     // Debug Print
     print("touchesBegan")
     
@@ -71,8 +71,8 @@ extension GameScene {
       
       let otherTouch = exclusiveTouches?.first!
       
-      let touchLocationOne = playerOneTouch?.locationInNode(self)
-      let touchLocationTwo = otherTouch?.locationInNode(self)
+      let touchLocationOne = playerOneTouch?.location(in: self)
+      let touchLocationTwo = otherTouch?.location(in: self)
       
 //      CGPathMoveToPoint(path, nil, (touchLocationOne?.x)!, (touchLocationOne?.y)!)
 //      CGPathAddLineToPoint(path, nil, (touchLocationTwo?.x)!, (touchLocationTwo?.y)!)
@@ -99,7 +99,7 @@ extension GameScene {
   // Touches Moved Function
   //
   
-  override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+  override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
     // Debug Print
     print("touchesMoved")
     
@@ -119,8 +119,8 @@ extension GameScene {
       
       let otherTouch = exclusiveTouches?.first!
       
-      let touchLocationOne = playerOneTouch?.locationInNode(self)
-      let touchLocationTwo = otherTouch?.locationInNode(self)
+      let touchLocationOne = playerOneTouch?.location(in: self)
+      let touchLocationTwo = otherTouch?.location(in: self)
       
 //      CGPathMoveToPoint(path, nil, (touchLocationOne?.x)!, (touchLocationOne?.y)!)
 //      CGPathAddLineToPoint(path, nil, (touchLocationTwo?.x)!, (touchLocationTwo?.y)!)
@@ -147,7 +147,7 @@ extension GameScene {
   // Touches Ended Function
   //
   
-  override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+  override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     // Debug Print
     print("touchesEnded")
     
@@ -167,12 +167,12 @@ extension GameScene {
   // TouchesForNode Function
   //
   
-  func touchesForNode(imageNamed: String?, _ touches: Set<UITouch>) -> Set<UITouch>? {
+  func touchesForNode(_ imageNamed: String?, _ touches: Set<UITouch>) -> Set<UITouch>? {
     
     var inclusiveTouches = Set<UITouch>()
     for touch in touches {
-      let location = touch.locationInNode(self)
-      if let node = self.nodeAtPoint(location) as? SKSpriteNode {
+      let location = touch.location(in: self)
+      if let node = self.atPoint(location) as? SKSpriteNode {
         if node.name == imageNamed {
           inclusiveTouches.insert(touch)
         }
@@ -190,7 +190,7 @@ extension GameScene {
   // TouchesNotForNode
   //
   
-  func touchesNotForNode(imageNamed: String?, _ touches: Set<UITouch>) -> Set<UITouch>? {
+  func touchesNotForNode(_ imageNamed: String?, _ touches: Set<UITouch>) -> Set<UITouch>? {
     
     var exclusiveTouches = touches
     if let excludedTouches = touchesForNode(imageNamed, touches) {
@@ -210,12 +210,12 @@ extension GameScene {
   // DragNodes Function
   //
   
-  func dragNodes(touches: Set<UITouch>, nodeKeys: [String]) {
+  func dragNodes(_ touches: Set<UITouch>, nodeKeys: [String]) {
     
     for key in nodeKeys {
       if let firstTouch = touchesForNode(key, touches)?.first {
-        let location = firstTouch.locationInNode(self)
-        let nodeTouched = self.nodeAtPoint(location)
+        let location = firstTouch.location(in: self)
+        let nodeTouched = self.atPoint(location)
         nodeTouched.position = location
         print("node dragged : \(nodeTouched.name)")
       }
@@ -231,13 +231,13 @@ extension GameScene {
   // isNodeSelected Function
   //
   
-  func isNodeSelected(imageNamed: String?, _ touches: Set<UITouch>) -> Bool {
+  func isNodeSelected(_ imageNamed: String?, _ touches: Set<UITouch>) -> Bool {
     
     let nodeTouches = touchesForNode(imageNamed, touches)
     guard (nodeTouches != nil) else { return false }
     
     for touch in nodeTouches! {
-      let location = touch.locationInView(self.view)
+      let location = touch.location(in: self.view)
       // Debug Print
       print("player1 @ x = \(location.x), y = \(location.y)")
     }
@@ -248,11 +248,11 @@ extension GameScene {
   // RegisterSelectedNodes
   //
   
-  func registerSelectedNodes(touches: Set<UITouch>) {
+  func registerSelectedNodes(_ touches: Set<UITouch>) {
     
     for touch in touches {
-      let location = touch.locationInNode(self)
-      if let node = self.nodeAtPoint(location) as? SKSpriteNode {
+      let location = touch.location(in: self)
+      if let node = self.atPoint(location) as? SKSpriteNode {
         self.selectedNodes.updateValue(touch, forKey: node)
       }
     }
@@ -267,7 +267,7 @@ extension GameScene {
   // ShouldFire Function
   //
   
-  func shouldFire(touches: Set<UITouch>) -> Bool {
+  func shouldFire(_ touches: Set<UITouch>) -> Bool {
     
     // Determine if touch meets requirements to be activated as a LineVector & animated
     // The following must be met to fire:
@@ -287,11 +287,11 @@ extension GameScene {
   //
   //  Adjusted Angle Calculation
   //
-  func rotateAngle(origin: CGPoint, toPoint: CGPoint) -> CGFloat {
+  func rotateAngle(_ origin: CGPoint, toPoint: CGPoint) -> CGFloat {
     
-    let adjustedPoint = CGPointMake((toPoint.x - origin.x), (toPoint.y - origin.y))
+    let adjustedPoint = CGPoint(x: (toPoint.x - origin.x), y: (toPoint.y - origin.y))
     let magnitude = sqrt(pow(adjustedPoint.x, 2) + pow(adjustedPoint.y, 2))
-    let unitPoint = CGPointMake((adjustedPoint.x / magnitude), (adjustedPoint.y / magnitude))
+    let unitPoint = CGPoint(x: (adjustedPoint.x / magnitude), y: (adjustedPoint.y / magnitude))
     
     var angle: CGFloat = 0
     

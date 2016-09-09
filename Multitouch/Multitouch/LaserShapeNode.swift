@@ -14,7 +14,7 @@ class LaserShapeNode: SKShapeNode {
   
   let start: CGPoint
   let end: CGPoint
-  let laserPath = CGPathCreateMutable()
+  let laserPath = CGMutablePath()
   
   
   required init?(coder aDecoder: NSCoder) {
@@ -46,18 +46,18 @@ class LaserShapeNode: SKShapeNode {
   func animate() {
     
     let fadeDuration = 1.0
-    let fadeAction = SKAction.fadeOutWithDuration(fadeDuration)
+    let fadeAction = SKAction.fadeOut(withDuration: fadeDuration)
     
     let waitDuration = 0.25
-    let waitAction = SKAction.waitForDuration(waitDuration)
+    let waitAction = SKAction.wait(forDuration: waitDuration)
     
     let colorizeDuration = 1.25
-    let colorizeAction = SKAction.colorizeWithColor(UIColor("#0741ae"), colorBlendFactor: 1.0, duration: colorizeDuration)
+    let colorizeAction = SKAction.colorize(with: UIColor("#0741ae"), colorBlendFactor: 1.0, duration: colorizeDuration)
     
-    let actionSequence = SKAction.sequence([waitAction, fadeAction, SKAction.runBlock({ self.removeFromParent() })])
+    let actionSequence = SKAction.sequence([waitAction, fadeAction, SKAction.run({ self.removeFromParent() })])
     
     let actionGroup = SKAction.group([colorizeAction, actionSequence])
     
-    self.runAction(actionGroup)
+    self.run(actionGroup)
   }
 }

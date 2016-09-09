@@ -19,12 +19,12 @@ class LaserNode: SKShapeNode {
   var isActive: Bool = false
   var animationDuration: CFTimeInterval?
   
-  private var linePath: CGMutablePath
+  fileprivate var linePath: CGMutablePath
   
   
   // MARK — Initializers
   override init() {
-    self.linePath = CGPathCreateMutable()
+    self.linePath = CGMutablePath()
     super.init()
   }
   
@@ -35,7 +35,7 @@ class LaserNode: SKShapeNode {
   
   
   init(start: CGPoint, _ end: CGPoint) {
-    self.linePath = CGPathCreateMutable()
+    self.linePath = CGMutablePath()
     self.start = start
     self.end = end
     super.init()
@@ -48,7 +48,7 @@ class LaserNode: SKShapeNode {
 extension LaserNode {
   
   func draw() {
-    self.linePath = CGPathCreateMutable()
+    self.linePath = CGMutablePath()
     CGPathMoveToPoint(self.linePath, nil, (self.start?.x)!, (self.start?.y)!)
     CGPathAddLineToPoint(self.linePath, nil, (self.end?.x)!, (self.end?.y)!)
     self.lineWidth = 4.0
@@ -67,31 +67,31 @@ extension LaserNode {
     // 1
     var appear = SKAction()
     let appearDuration: CFTimeInterval = 1.0
-    appear = SKAction.fadeInWithDuration(appearDuration)
+    appear = SKAction.fadeIn(withDuration: appearDuration)
     
     // 2
     var wait = SKAction()
     let waitDuration: CFTimeInterval = 1.0
-    wait = SKAction.waitForDuration(waitDuration)
+    wait = SKAction.wait(forDuration: waitDuration)
 
     // 3
     var disappear = SKAction()
     let disappearDuration: CFTimeInterval = 1.0
-    disappear = SKAction.fadeOutWithDuration(disappearDuration)
+    disappear = SKAction.fadeOut(withDuration: disappearDuration)
     
     // 1 - 3
     var colorize = SKAction()
     let colorizeDuration: CFTimeInterval = 3.0
-    colorize = SKAction.colorizeWithColor(UIColor("#911969"), colorBlendFactor: 1.0, duration: colorizeDuration)
+    colorize = SKAction.colorize(with: UIColor("#911969"), colorBlendFactor: 1.0, duration: colorizeDuration)
     
     // Sequencing and Grouping
     let actionSequence = SKAction.sequence([appear, wait, disappear])
-    let debugAction = SKAction.runBlock({ print("Running Actions Now!") })
+    let debugAction = SKAction.run({ print("Running Actions Now!") })
     let actionGroup = SKAction.group([actionSequence, colorize, debugAction])
     
     // Running
     self.isActive = true
-    self.runAction(actionGroup, completion: {
+    self.run(actionGroup, completion: {
       print("Action Completed")
       self.isActive = false
       self.reset()
@@ -106,7 +106,7 @@ extension LaserNode {
 // MARK – Setting Functions
 extension LaserNode {
   
-  func set(start: CGPoint, _ end: CGPoint) {
+  func set(_ start: CGPoint, _ end: CGPoint) {
     self.start = start
     self.end = end
   }
@@ -122,7 +122,7 @@ extension LaserNode {
   func reset() {
     self.start = nil
     self.end = nil
-    self.linePath = CGPathCreateMutable()
+    self.linePath = CGMutablePath()
     self.lineWidth = 0.0
     self.alpha = 0.0
     self.removeFromParent()
