@@ -49,8 +49,15 @@ extension LaserNode {
   
   func draw() {
     self.linePath = CGMutablePath()
-    CGPathMoveToPoint(self.linePath, nil, (self.start?.x)!, (self.start?.y)!)
-    CGPathAddLineToPoint(self.linePath, nil, (self.end?.x)!, (self.end?.y)!)
+    
+    self.linePath.move(to: self.start!)
+    self.linePath.addLine(to: self.end!)
+    
+//    self.path = self.laserPath
+    
+//    CGPathMoveToPoint(self.linePath, nil, (self.start?.x)!, (self.start?.y)!)
+//    CGPathAddLineToPoint(self.linePath, nil, (self.end?.x)!, (self.end?.y)!)
+    
     self.lineWidth = 4.0
     self.strokeColor = UIColor("#ff0257")
     self.alpha = 0.0 // may have to change to 0.0 for animation

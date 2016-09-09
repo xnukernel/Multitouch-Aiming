@@ -30,8 +30,8 @@ class LaserShapeNode: SKShapeNode {
     
     super.init()
     
-    CGPathMoveToPoint(self.laserPath, nil, self.start.x, self.start.y)
-    CGPathAddLineToPoint(self.laserPath, nil, self.end.x, self.end.y)
+    self.laserPath.move(to: self.start)
+    self.laserPath.addLine(to: self.end)
     
     self.path = self.laserPath
     
